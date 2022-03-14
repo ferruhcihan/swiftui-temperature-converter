@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Temperature Converter")
-            .padding()
+        VStack{
+            Text("212").font(Font.system(size: 64))
+            Text("fahrenheit")
+            Text("is actually")
+            Text("100").font(Font.system(size: 64))
+            Text("degrees Celcius")
+            Spacer()
+        }.foregroundColor(.orange).font(.title)
     }
 }
 
