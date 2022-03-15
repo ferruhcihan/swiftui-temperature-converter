@@ -35,6 +35,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             TextField("value", text: $fahrenheitValue)
+                .keyboardType(.decimalPad)
                 .font(Font.system(size: 64))
                 .multilineTextAlignment(.center)
             Text("fahrenheit")
