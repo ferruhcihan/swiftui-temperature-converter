@@ -11,6 +11,17 @@ struct ContentView: View {
     
     @State var fahrenheitValue: String = ""
     
+    func convertToCelcius() -> String {
+        
+        if let value = Double(fahrenheitValue){
+            let fahrenheit = Measurement<UnitTemperature>(value: value, unit: .fahrenheit)
+            let celsiusValue = fahrenheit.converted(to: .celsius)
+            return "\(celsiusValue.value)"
+        } else {
+            return "???"
+        }
+    }
+    
     var body: some View {
         VStack{
             TextField("value", text: $fahrenheitValue)
@@ -18,7 +29,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
             Text("fahrenheit")
             Text("is actually").foregroundColor(.gray)
-            Text(self.fahrenheitValue.isEmpty ? "???" : self.fahrenheitValue).font(Font.system(size: 64))
+            Text(convertToCelcius())
             Text("degrees Celcius")
             Spacer()
         }.foregroundColor(.orange).font(.title)
