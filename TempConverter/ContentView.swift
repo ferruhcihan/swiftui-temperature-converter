@@ -11,12 +11,22 @@ struct ContentView: View {
     
     @State var fahrenheitValue: String = ""
     
+    let numberFormatter : NumberFormatter = {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter
+    
+    }()
+    
     func convertToCelcius() -> String {
         
         if let value = Double(fahrenheitValue){
             let fahrenheit = Measurement<UnitTemperature>(value: value, unit: .fahrenheit)
             let celsiusValue = fahrenheit.converted(to: .celsius)
-            return "\(celsiusValue.value)"
+            return numberFormatter.string(from: NSNumber(value: celsiusValue.value)) ?? "???"
         } else {
             return "???"
         }
