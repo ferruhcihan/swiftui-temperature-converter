@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var fahrenheitValue: String = "212"
+    @State var fahrenheitValue: String = ""
     
     var body: some View {
         VStack{
@@ -18,7 +18,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
             Text("fahrenheit")
             Text("is actually").foregroundColor(.gray)
-            Text(self.fahrenheitValue).font(Font.system(size: 64))
+            Text(self.fahrenheitValue.isEmpty ? "???" : self.fahrenheitValue).font(Font.system(size: 64))
             Text("degrees Celcius")
             Spacer()
         }.foregroundColor(.orange).font(.title)
