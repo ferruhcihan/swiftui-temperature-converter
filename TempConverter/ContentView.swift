@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var fahrenheitValue: String = "212"
+    
     var body: some View {
         VStack{
-            Text("212").font(Font.system(size: 64))
+            TextField("value", text: $fahrenheitValue)
+                .font(Font.system(size: 64))
+                .multilineTextAlignment(.center)
             Text("fahrenheit")
-            Text("is actually")
-            Text("100").font(Font.system(size: 64))
+            Text("is actually").foregroundColor(.gray)
+            Text(self.fahrenheitValue).font(Font.system(size: 64))
             Text("degrees Celcius")
             Spacer()
         }.foregroundColor(.orange).font(.title)
