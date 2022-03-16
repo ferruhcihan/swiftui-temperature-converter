@@ -15,12 +15,14 @@ struct TempConverterApp: App {
                 ContentView()
                     .tabItem {
                         HStack {
+                            Image(systemName: "thermometer")
                             Text("Conversion")
                         }
                     }
                 MapView()
                     .tabItem {
                         HStack {
+                            Image(systemName: "map")
                             Text("Map")
                         }
                     }
