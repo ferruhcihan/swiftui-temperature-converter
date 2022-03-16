@@ -27,6 +27,7 @@ struct TempConverterApp: App {
                         }
                     }
             }
+            .accentColor(.orange)
         }
     }
 }
