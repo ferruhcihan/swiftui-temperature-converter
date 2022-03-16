@@ -11,7 +11,20 @@ import SwiftUI
 struct TempConverterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                ContentView()
+                    .tabItem {
+                        HStack {
+                            Text("Conversion")
+                        }
+                    }
+                MapView()
+                    .tabItem {
+                        HStack {
+                            Text("Map")
+                        }
+                    }
+            }
         }
     }
 }
