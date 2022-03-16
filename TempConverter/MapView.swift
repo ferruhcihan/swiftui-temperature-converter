@@ -1,15 +1,23 @@
 //
-//  SwiftUIView.swift
+//  MapView.swift
 //  TempConverter
 //
 //  Created by yoda on 16.03.2022.
 //
 
 import SwiftUI
+import MapKit
 
 struct MapView: View {
+    
+    @State var region: MKCoordinateRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 41.0, longitude: 29.0),
+        span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
+    )
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Map(coordinateRegion: $region)
     }
 }
 

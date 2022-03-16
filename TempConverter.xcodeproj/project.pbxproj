@@ -14,6 +14,7 @@
 		D598E68927DFCB580096B778 /* TempConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598E68827DFCB580096B778 /* TempConverterTests.swift */; };
 		D598E69327DFCB580096B778 /* TempConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598E69227DFCB580096B778 /* TempConverterUITests.swift */; };
 		D598E69527DFCB580096B778 /* TempConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598E69427DFCB580096B778 /* TempConverterUITestsLaunchTests.swift */; };
+		D598E6A427E250830096B778 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D598E6A327E250830096B778 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D598E68E27DFCB580096B778 /* TempConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D598E69227DFCB580096B778 /* TempConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterUITests.swift; sourceTree = "<group>"; };
 		D598E69427DFCB580096B778 /* TempConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D598E6A327E250830096B778 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				D598E67727DFCB570096B778 /* TempConverterApp.swift */,
 				D598E67927DFCB570096B778 /* ContentView.swift */,
+				D598E6A327E250830096B778 /* MapView.swift */,
 				D598E67B27DFCB580096B778 /* Assets.xcassets */,
 				D598E67D27DFCB580096B778 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				D598E67A27DFCB570096B778 /* ContentView.swift in Sources */,
 				D598E67827DFCB570096B778 /* TempConverterApp.swift in Sources */,
+				D598E6A427E250830096B778 /* MapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
