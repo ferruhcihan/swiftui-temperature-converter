@@ -10,10 +10,18 @@ import MapKit
 
 struct MapView: View {
     
-    @State var region: MKCoordinateRegion = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 41.0, longitude: 29.0),
-        span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
-    )
+    static var regions: [MKCoordinateRegion] = [
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 41.0, longitude: 29.0),
+            span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
+        ),
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 51.5098, longitude: -0.1180),
+            span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
+        )
+    ]
+    
+    @State var region: MKCoordinateRegion = regions[0]
     
     @State var selectedIndex = 0
     
@@ -26,6 +34,9 @@ struct MapView: View {
                         Text("İstanbul").tag(0)
                         Text("London").tag(1)
                     }).pickerStyle(SegmentedPickerStyle())
+                        .padding()
+                        .onChange(of: selectedIndex, perform: { value in self.region = MapView.regions[selectedIndex]
+                        })
                     Spacer()
                 }
             )
