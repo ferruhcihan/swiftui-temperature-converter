@@ -21,10 +21,13 @@ struct MapView: View {
         Map(coordinateRegion: $region)
             .edgesIgnoringSafeArea(.top)
             .overlay(
-                Picker("Picker", selection: $selectedIndex, content: {
-                    Text("İstanbul").tag(0)
-                    Text("London").tag(1)
-                }).pickerStyle(SegmentedPickerStyle())
+                VStack {
+                    Picker("Picker", selection: $selectedIndex, content: {
+                        Text("İstanbul").tag(0)
+                        Text("London").tag(1)
+                    }).pickerStyle(SegmentedPickerStyle())
+                    Spacer()
+                }
             )
     }
 }
